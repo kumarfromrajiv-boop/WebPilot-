@@ -1,0 +1,236 @@
+/* ==========================================
+FILE NAME: style.css
+DESCRIPTION: WebPilot AI का आधुनिक और टेक-आधारित डिज़ाइन।
+========================================== */
+
+/* --- बेसिक रीसेट और फोंट --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* आधुनिक और साफ़ फोंट */
+    background-color: #0b0f19; /* गहरा और आकर्षक बैकग्राउंड */
+    color: #e2e8f0;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.main-wrapper {
+    max-width: 900px;
+    width: 100%;
+}
+
+/* --- हेडर और लोगो --- */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo-area h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 5px;
+    letter-spacing: -1px;
+}
+
+.logo-area h1 span {
+    color: #38bdf8; /* हाईलाइट नीला रंग */
+}
+
+.tagline {
+    color: #94a3b8;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+/* --- मुख्य लेआउट (Flexbox for responsiveness) --- */
+main {
+    display: flex;
+    gap: 30px; /* दोनों कार्ड्स के बीच जगह */
+}
+
+/* मोबाइल पर कार्ड्स को एक के नीचे एक दिखाना */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+}
+
+/* --- सामान्य कार्ड स्टाइल --- */
+.panel {
+    flex: 1; /* दोनों कार्ड्स को बराबर जगह मिले */
+    background-color: #1a2234; /* कार्ड का बैकग्राउंड */
+    padding: 30px;
+    border-radius: 16px; /* गोल कोने */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+    border: 1px solid #2d3748; /* हल्का बॉर्डर */
+}
+
+/* --- इनपुट पैनल --- */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #cbd5e1;
+}
+
+.input-group input, 
+.input-group textarea {
+    width: 100%;
+    padding: 14px;
+    background-color: #232d41;
+    border: 1px solid #404d61;
+    border-radius: 8px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.input-group input:focus, 
+.input-group textarea:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.3); /* ग्लो इफ़ेक्ट */
+}
+
+textarea {
+    resize: vertical; /* यूजर टेक्स्टएरिया को छोटा-बड़ा कर सके */
+}
+
+/* --- बटन स्टाइल --- */
+.btn-primary {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); /* ग्रेडिएंट कलर */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #0369a1 0%, #0284c7 100%);
+    transform: translateY(-2px); /* हल्का ऊपर उठना */
+    box-shadow: 0 5px 15px rgba(2, 132, 199, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(1px); /* क्लिक करने पर हल्का दबना */
+}
+
+/* --- स्टेटस और लॉग्स पैनल --- */
+.logs-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.panel-header h3 {
+    font-size: 1.3rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* --- स्टेटस बैज --- */
+.badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.badge-waiting {
+    background-color: #475569;
+    color: #e2e8f0;
+}
+
+.badge-running {
+    background-color: #d97706; /* नारंगी */
+    color: #fff;
+    animation: pulse 1.5s infinite; /* पलसाटिंग इफ़ेक्ट */
+}
+
+.badge-completed {
+    background-color: #16a34a; /* हरा */
+    color: #fff;
+}
+
+/* --- लॉग्स कंटेनर --- */
+.logs-container {
+    background-color: #020617; /* बहुत गहरा बैकग्राउंड */
+    border-radius: 8px;
+    padding: 15px;
+    font-family: 'Courier New', Courier, monospace; /* कोड जैसा फोंट */
+    font-size: 0.95rem;
+    color: #22c55e; /* हरा रंग */
+    flex-grow: 1; /* कंटेनर को पूरा जगह मिले */
+    height: 300px;
+    overflow-y: auto; /* स्क्रॉल के लिए */
+    border: 1px solid #1e293b;
+}
+
+/* मोबाइल पर लॉग्स की ऊंचाई कम करना */
+@media (max-width: 768px) {
+    .logs-container {
+        height: 200px;
+    }
+}
+
+.log-entry {
+    margin-bottom: 8px;
+    opacity: 0.8;
+}
+
+.log-entry:last-child {
+    opacity: 1;
+    font-weight: 500;
+}
+
+.log-system {
+    color: #38bdf8; /* सिस्टम लॉग्स नीला रंग */
+}
+
+/* --- फूटर --- */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+/* --- एनिमेशन --- */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(217, 119, 6, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(217, 119, 6, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(217, 119, 6, 0);
+    }
+}
