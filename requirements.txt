@@ -1,0 +1,12 @@
+# ==========================================
+# FILE NAME: requirements.txt
+# WORK DESCRIPTION:
+# यह फाइल उन सभी पाइथन लाइब्रेरीज़ की लिस्ट है जो सर्वर पर 
+# Playwright, FastAPI और AI API को चलाने के लिए आवश्यक हैं।
+# ==========================================
+
+fastapi
+uvicorn
+playwright
+requests
+pydantic
