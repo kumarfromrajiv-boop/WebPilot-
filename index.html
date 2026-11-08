@@ -1,0 +1,62 @@
+<!-- ==========================================
+FILE NAME: index.html
+DESCRIPTION: WebPilot AI का मुख्य पेज (Frontend)।
+========================================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebPilot AI - Anonymous Automation</title>
+    <!-- नए स्टाइलशीट को लिंक करना -->
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- आधुनिक फोंट के लिए Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <header>
+            <div class="logo-area">
+                <h1>Web<span>Pilot</span> AI</h1>
+            </div>
+            <p class="tagline">Execute web tasks anonymously. No account needed.</p>
+        </header>
+
+        <main>
+            <!-- इनपुट कार्ड -->
+            <div class="panel input-panel">
+                <div class="input-group">
+                    <label for="url">Target Website URL</label>
+                    <input type="url" id="url" placeholder="https://example.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="instruction">What should AI do?</label>
+                    <textarea id="instruction" placeholder="e.g., 'Log in with these credentials, go to reports, and download the March PDF'" rows="5"></textarea>
+                </div>
+
+                <button id="start-btn" class="btn-primary" onclick="startTask()">LAUNCH AGENT</button>
+            </div>
+
+            <!-- स्टेटस और लॉग्स कार्ड -->
+            <div class="panel logs-panel">
+                <div class="panel-header">
+                    <h3>Execution Status</h3>
+                    <div id="status-badge" class="badge badge-waiting">Ready</div>
+                </div>
+                <div id="logs" class="logs-container">
+                    <div class="log-entry log-system">Initial state: Awaiting task...</div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 WebPilot AI Automation. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- पुराने script.js को लिंक करना -->
+    <script src="/static/script.js"></script>
+</body>
+</html>
